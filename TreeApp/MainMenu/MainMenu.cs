@@ -1,4 +1,5 @@
 ﻿using Spectre.Console;
+using TreeApp.Interfaces;
 using TreeApp.Models;
 using TreeApp.Models.ChildModels;
 using TreeApp.Service;
@@ -11,9 +12,19 @@ namespace TreeApp.MainMenu
         BaseService bs = new BaseService();
 		public void ShowMenu()
 		{
-            List<BaseTree> ls = new List<BaseTree>();
+            List<IBaseTreeInterface> ls = new();
 
 			cap = AnsiConsole.Ask<int>("Please enter [green]capacity[/]: ");
+            if (String.IsNullOrEmpty(cap.ToString()) || cap == 0)
+            {
+                Console.WriteLine("Please enter valid area in digits!");
+                Console.WriteLine("Please hit enter to continue: ");
+                Console.ReadLine();
+                Console.Clear();
+                ShowMenu();
+            }
+
+            if (cap < 0) { Console.WriteLine("The area should be positive number!"); ShowMenu(); }
             var favorites = AnsiConsole.Prompt(
             new MultiSelectionPrompt<string>()
             .PageSize(10)
@@ -92,7 +103,7 @@ namespace TreeApp.MainMenu
                         ls.Add(okland);
                     }
                 }
-                Console.WriteLine($"Capacity: {bs.isEnoughCap(ls, cap)} MaxHeight: {bs.AverageMaxHeight(ls, cap)}, Fruitelness: {bs.Fruitfulness(ls)}");
+                Console.WriteLine($"Capacity: {bs.isEnoughCap(ls, cap)} MaxHeight: {bs.AverageMaxHeight(ls)}, Fruitelness: {bs.Fruitfulness(ls)}");
                 Console.ReadLine();
             }
         }

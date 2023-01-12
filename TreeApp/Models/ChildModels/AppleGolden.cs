@@ -1,22 +1,24 @@
 ﻿using System;
+using TreeApp.Interfaces;
+
 namespace TreeApp.Models
 {
-	public sealed class AppleGolden:AppleTree
+	public sealed class AppleGolden:IBaseTreeInterface
 	{
         /// <summary>
         /// The max height of the tree
         /// </summary>
-        public override double MaxHeight { get; set; } = 1.5;
+        public double MaxHeight => 1.5;
 
         /// <summary>
         /// The Max Square of the tree
         /// </summary>
-        public override double MaxSquare { get; set; } = 2.3;
+        public  double MaxSquare => 2.3;
 
         /// <summary>
         /// In how many years the tree will give fruits
         /// </summary>
-        public override double MaxFruitliness { get; set; } = 6.5;
+        public  double MaxFruitliness => 6.5;
 
     }
 }

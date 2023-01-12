@@ -1,22 +1,23 @@
-﻿using System;
+﻿using TreeApp.Interfaces;
+
 namespace TreeApp.Models.ChildModels
 {
-	public sealed class FrostyCherry:CherryTree
+	public sealed class FrostyCherry:IBaseTreeInterface
 	{
         /// <summary>
         /// The max height of the tree
         /// </summary>
-        public override double MaxHeight { get; set; } = 23.5;
+        public double MaxHeight => 14.5;
 
         /// <summary>
         /// The Max Square of the tree
         /// </summary>
-        public override double MaxSquare { get; set; } = 11;
+        public double MaxSquare => 33;
 
         /// <summary>
         /// In how many years the tree will give fruits
         /// </summary>
-        public override double MaxFruitliness { get; set; } = 13;
+        public double MaxFruitliness => 19;
 
     }
 }

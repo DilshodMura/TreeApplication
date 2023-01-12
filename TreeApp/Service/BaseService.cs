@@ -1,4 +1,4 @@
-﻿using System;
+﻿using TreeApp.Interfaces;
 
 namespace TreeApp.Service
 {
@@ -9,13 +9,13 @@ namespace TreeApp.Service
 		/// Caclulate if the given area will fit the amount of trees to plant.
 		/// </summary>
 		/// <returns></returns>
-		public  double isEnoughCap(List<BaseTree> bs, int cap)
+		public  double isEnoughCap(List<IBaseTreeInterface> bs, int cap)
 		{
 			foreach (var item in bs)
 			{
 				 result =+ (bs.Count() * item.MaxSquare);
             }
-			result = cap / result;
+			result = result / cap;
 			if (result > 1)
 				return result;
 			else
@@ -26,7 +26,7 @@ namespace TreeApp.Service
 		/// Caculate the average height of the trees in the given amount.
 		/// </summary>
 		/// <returns></returns>
-		public double AverageMaxHeight(List<BaseTree> bs, int cap)
+		public double AverageMaxHeight(List<IBaseTreeInterface> bs)
 		{
 			var count = bs.Count();
             foreach (var item in bs)
@@ -40,7 +40,7 @@ namespace TreeApp.Service
 		/// Calculate in how many years the trees will give fruits.
 		/// </summary>
 		/// <returns></returns>
-		public double Fruitfulness(List<BaseTree>bs)
+		public double Fruitfulness(List<IBaseTreeInterface> bs)
 		{
             return bs.Select(x => x.MaxFruitliness).Max();
         }
