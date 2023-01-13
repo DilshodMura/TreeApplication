@@ -2,8 +2,8 @@
 
 namespace TreeApp.Models.ChildModels
 {
-	public sealed class FrostyCherry:IBaseTreeInterface
-	{
+    public sealed class FrostyCherry : IBaseTree
+    {
         /// <summary>
         /// The max height of the tree
         /// </summary>
@@ -19,6 +19,7 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 19;
 
+        public string SortName => nameof(FrostyCherry);
     }
 }
 

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using System.Reflection;
 using TreeApp.Interfaces;
 
 namespace TreeApp.Models.ChildModels
 {
-	public sealed class AppleSemerenko:IBaseTreeInterface
-	{
+    public sealed class AppleSemerenko : IBaseTree
+    {
         /// <summary>
         /// The max height of the tree
         /// </summary>
@@ -20,6 +20,7 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 10;
 
+        public string SortName => nameof(AppleSemerenko);
     }
 }
 

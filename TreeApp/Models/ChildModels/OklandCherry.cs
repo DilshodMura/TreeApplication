@@ -2,8 +2,8 @@
 
 namespace TreeApp.Models.ChildModels
 {
-	public sealed class OklandCherry:IBaseTreeInterface
-	{
+    public sealed class OklandCherry : IBaseTree
+    {
         /// <summary>
         /// The max height of the tree
         /// </summary>
@@ -19,6 +19,7 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 13;
 
+        public string SortName => nameof(OklandCherry);
     }
 }
 

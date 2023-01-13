@@ -1,7 +1,7 @@
 ﻿
 namespace TreeApp.Interfaces
 {
-    public interface IBaseTreeInterface
+    public interface IBaseTree
     {
         /// <summary>
 		/// The max height of the tree
@@ -17,5 +17,10 @@ namespace TreeApp.Interfaces
         /// In how many years the tree will give fruits
         /// </summary>
         public double MaxFruitliness { get; }
+
+        /// <summary>
+        /// Gets the tree sort type
+        /// </summary>
+        public string SortName { get; }
     }
 }

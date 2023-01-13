@@ -2,48 +2,37 @@
 
 namespace TreeApp.Service
 {
-	public class BaseService
+	public sealed class BaseService
 	{
-		private double result;
 		/// <summary>
 		/// Caclulate if the given area will fit the amount of trees to plant.
 		/// </summary>
 		/// <returns></returns>
-		public  double isEnoughCap(List<IBaseTreeInterface> bs, int cap)
+		public double isEnoughCap(IEnumerable<IBaseTree> baseTree, int farmArea)
 		{
-			foreach (var item in bs)
-			{
-				 result =+ (bs.Count() * item.MaxSquare);
-            }
-			result = result / cap;
-			if (result > 1)
+		   var result = baseTree.Sum(t => t.MaxSquare) - farmArea;
+			if(result < 0)
 				return result;
-			else
-				return 0;
+			return 0;
 		}
 
 		/// <summary>
 		/// Caculate the average height of the trees in the given amount.
 		/// </summary>
 		/// <returns></returns>
-		public double AverageMaxHeight(List<IBaseTreeInterface> bs)
+		public double AverageMaxHeight(IEnumerable<IBaseTree> baseTree)
 		{
-			var count = bs.Count();
-            foreach (var item in bs)
-            {
-				result = item.MaxHeight/count;
-            }
-			return result;
+			return baseTree.Average(t => t.MaxHeight); ;
 		}
 
 		/// <summary>
 		/// Calculate in how many years the trees will give fruits.
 		/// </summary>
 		/// <returns></returns>
-		public double Fruitfulness(List<IBaseTreeInterface> bs)
+		public double Fruitfulness(IEnumerable<IBaseTree> baseTree)
 		{
-            return bs.Select(x => x.MaxFruitliness).Max();
-        }
+			return baseTree.Max(x => x.MaxFruitliness);
+		}
 	}
 }
 
