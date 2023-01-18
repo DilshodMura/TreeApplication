@@ -13,7 +13,7 @@ namespace TreeApp.Models.ChildModels
         /// <summary>
         /// The Max Square of the tree
         /// </summary>
-        public double MaxSquare => 12.3;
+        public double MaxSquare => 5.3;
 
         /// <summary>
         /// In how many years the tree will give fruits

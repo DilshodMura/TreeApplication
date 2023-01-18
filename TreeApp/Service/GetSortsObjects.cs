@@ -10,15 +10,15 @@ namespace TreeApp.Service
         /// <summary>
         /// Generation the objects for all types of trees.
         /// </summary>
-        public void AddSorts(List<IBaseTree> baseTrees, IUserInput user)
+        public void AddSorts(IUserInput user)
         {
             foreach (var sort in user.sorts)
             {
                 var numOfTrees = AnsiConsole.Ask<int>($"How many {sort}s do you want to plant: ");
                 var tree = _teeFactory.GetTreeFactory(sort);
-                for (int i = 0; i < numOfTrees; i++)
+                for (int index = 0; index < numOfTrees; index++)
                 {
-                    baseTrees.Add(tree);
+                    user.treeList.Add(tree);
                 }
             }
         }

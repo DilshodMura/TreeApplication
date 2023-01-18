@@ -23,5 +23,10 @@ namespace TreeApp.Interfaces
         /// Gets or sets the tree sorts choosen by users.
         /// </summary>
         public List<TreeSorts> sorts { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tree's list for collecting the data.
+        /// </summary>
+        public List<IBaseTree> treeList { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace TreeApp.Interfaces
         /// <summary>
         /// Providing the sorts of trees to the user
         /// </summary>
-        public void AddSorts(List<IBaseTree> baseTrees, IUserInput user);
+        public void AddSorts(IUserInput user);
     }
 }

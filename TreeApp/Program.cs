@@ -2,5 +2,5 @@
 using TreeApp.MainMenu;
 
 MainMenu mn = new MainMenu();
-mn.ShowMenu();
+mn.PrintMenu();
 Console.ReadLine();
