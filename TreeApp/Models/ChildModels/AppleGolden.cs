@@ -20,8 +20,14 @@ namespace TreeApp.Models
         /// </summary>
         public double MaxFruitliness => 6.5;
 
+        /// <summary>
+        /// Adding default sort for particalar tree
+        /// </summary>
         public TreeSorts SortName => TreeSorts.Golden;
 
+        /// <summary>
+        /// Adding default type for particalar tree
+        /// </summary>
         public TreeTypes TreeTypes => TreeTypes.Apple;
     }
 }

@@ -20,8 +20,14 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 19;
 
+        /// <summary>
+        /// Added default sort for particular tree
+        /// </summary>
         public TreeSorts SortName => TreeSorts.Frosty;
 
+        /// <summary>
+        /// Adding default type for particalar tree
+        /// </summary>
         public TreeTypes TreeTypes => TreeTypes.Cherry;
     }
 }

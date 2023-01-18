@@ -1,11 +1,13 @@
 ﻿using TreeApp.Enums;
 using TreeApp.Interfaces;
-using TreeApp.Models;
 
 namespace TreeApp.Service
 {
-    internal class TreeTypesFactory : ITreeTypesFactory
+    public sealed class TreeTypesFactory : ITreeTypesFactory
     {
+        /// <summary>
+        /// Setting up the tree sorts for choosen tree types.
+        /// </summary>
         public List<TreeSorts> GetTreeSorts(IUserInput userInput)
         {
             var treeSorts = new List<TreeSorts>();

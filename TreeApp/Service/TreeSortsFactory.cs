@@ -7,6 +7,9 @@ namespace TreeApp.Service
 {
     public sealed class TreeSortsFactory : ITreeFactory
     {
+        /// <summary>
+        /// Class helper for generating the objects for trees.
+        /// </summary>
         public IBaseTree GetTreeFactory(TreeSorts treeSort)
         {
             switch (treeSort)
@@ -20,7 +23,7 @@ namespace TreeApp.Service
                 case TreeSorts.Semerenko:
                     return new AppleSemerenko();
                 default:
-                    throw new NotImplementedException();
+                    throw new ArgumentException("Invalid input. Please try again.");
             }
         }
     }

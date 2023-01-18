@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using TreeApp.Enums;
+﻿using TreeApp.Enums;
 using TreeApp.Interfaces;
 
 namespace TreeApp.Models.ChildModels
@@ -21,8 +20,14 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 10;
 
+        /// <summary>
+        /// Added default sort for particular tree
+        /// </summary>
         public TreeSorts SortName => TreeSorts.Semerenko;
 
+        /// <summary>
+        /// Adding default type for particalar tree
+        /// </summary>
         public TreeTypes TreeTypes => TreeTypes.Apple;
     }
 }

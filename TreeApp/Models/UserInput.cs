@@ -5,6 +5,9 @@ namespace TreeApp.Models
 {
     public sealed class UserInput: IUserInput
     {
+        /// <summary>
+        /// User input model which tracks the data.
+        /// </summary>
         public int FarmArea { get; set; }
         public int NumberOfTrees { get; set; }
         public List<TreeTypes> treeTypes { get ; set; }

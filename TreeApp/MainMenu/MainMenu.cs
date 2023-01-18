@@ -13,18 +13,9 @@ namespace TreeApp.MainMenu
         private readonly ITreeTypesFactory typesFactory = new TreeTypesFactory();
         private readonly ISortsObjects sortsObjects = new GetSortsObjects();
 
-        //public MainMenu(ITreeFactory _treeFactory, ITreeTypesFactory _typesFactory,IUserInput _userInput, ISortsObjects _sortsObjects)
-        //{
-        //    treeFactory = _treeFactory;
-        //    typesFactory = _typesFactory;
-        //    userInput = _userInput;
-        //    sortsObjects = _sortsObjects;
-        //}
-
-        public MainMenu()
-        {
-
-        }
+        /// <summary>
+        /// Displaying the main menu for users.
+        /// </summary>
         public void ShowMenu()
         {
             List<IBaseTree> ls = new();

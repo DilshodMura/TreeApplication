@@ -20,8 +20,14 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 13;
 
+        /// <summary>
+        /// Adding default sort for particalar tree
+        /// </summary>
         public TreeSorts SortName => TreeSorts.Oakland;
 
+        /// <summary>
+        /// Adding default type for particalar tree
+        /// </summary>
         public TreeTypes TreeTypes => TreeTypes.Cherry; 
     }
 }
