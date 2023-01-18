@@ -1,4 +1,5 @@
-﻿using TreeApp.Interfaces;
+﻿using TreeApp.Enums;
+using TreeApp.Interfaces;
 
 namespace TreeApp.Models
 {
@@ -19,7 +20,9 @@ namespace TreeApp.Models
         /// </summary>
         public double MaxFruitliness => 6.5;
 
-        public string SortName => nameof(AppleGolden);
+        public TreeSorts SortName => TreeSorts.Golden;
+
+        public TreeTypes TreeTypes => TreeTypes.Apple;
     }
 }
 

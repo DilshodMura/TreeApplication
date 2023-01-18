@@ -1,4 +1,5 @@
-﻿using TreeApp.Interfaces;
+﻿using TreeApp.Enums;
+using TreeApp.Interfaces;
 
 namespace TreeApp.Models.ChildModels
 {
@@ -19,7 +20,9 @@ namespace TreeApp.Models.ChildModels
         /// </summary>
         public double MaxFruitliness => 13;
 
-        public string SortName => nameof(OklandCherry);
+        public TreeSorts SortName => TreeSorts.Oakland;
+
+        public TreeTypes TreeTypes => TreeTypes.Cherry; 
     }
 }
 

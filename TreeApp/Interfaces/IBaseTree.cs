@@ -1,4 +1,6 @@
 ﻿
+using TreeApp.Enums;
+
 namespace TreeApp.Interfaces
 {
     public interface IBaseTree
@@ -21,6 +23,8 @@ namespace TreeApp.Interfaces
         /// <summary>
         /// Gets the tree sort type
         /// </summary>
-        public string SortName { get; }
+        public TreeSorts SortName { get; }
+
+        public TreeTypes TreeTypes { get; }
     }
 }
